@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-title>Add New Product...</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Enter product name" formControlName="productName">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width"> 
+        <mat-select placeholder="Select Vendor" formControlName="vendor" required>
+          <div *ngFor="let vendor of vendors">
+          <mat-option [value]="vendor">{{vendor.vendorName}}</mat-option>
+          </div>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input type="number" matInput formControlName="price" placeholder="Enter M.R.P.(rupees)">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput formControlName="batchNum" placeholder="Enter Batch Number">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input type="date" matInput formControlName="batchDate" placeholder="Enter Manufacturing Date">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+          <input type="number" matInput formControlName="quantity" placeholder="Quantity">
+        </mat-form-field>
+      <br>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </mat-card-content>
+</mat-card>

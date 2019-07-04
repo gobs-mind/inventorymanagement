@@ -1,0 +1,37 @@
+ <mat-card class="mt-3">
+    <div class="example-container">
+      <form>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Id" disabled value={{product?.productId}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Name" disabled value={{product?.productName}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Vendor" disabled value={{product?.vendor?.vendorName}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="M.R.P.(rupees)" disabled value={{product?.price}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Batch Number" disabled value={{product?.batchNum}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Manufacturing Date(yyyy-mm-dd)" disabled value={{product?.batchDate}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Quantity" disabled value={{product?.quantity}}>
+      </mat-form-field>
+    </form>
+    </div>
+    <div>
+        <button type="button" mat-button style="background: rgb(214, 167, 114)" (click)="update()">Update</button>
+        <button type="button" mat-button style="background: rgb(252, 1, 1); margin-left: 2%" (click)="delete()">Delete</button>
+    </div>
+  </mat-card>

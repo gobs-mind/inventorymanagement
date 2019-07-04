@@ -1,0 +1,39 @@
+<mat-card class="mt-3">
+  <div class="example-container">
+    <form>
+      <div *ngIf="productRequest?.requestType != 'new'">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Product Id" disabled value={{productRequest?.productId}}>
+        </mat-form-field>
+        <br>
+      </div>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Name" disabled value={{productRequest?.productName}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Vendor" disabled value={{productRequest?.vendor?.vendorName}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="M.R.P.(rupees)" disabled value={{productRequest?.price}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Batch Number" disabled value={{productRequest?.batchNum}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Manufacturing Date(yyyy-mm-dd)" disabled value={{productRequest?.batchDate}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Quantity" disabled value={{productRequest?.quantity}}>
+      </mat-form-field>
+    </form>
+  </div>
+  <div>
+    <button type="button" mat-button style="background: rgb(128, 223, 21)" (click)="approve()">Approve</button>
+    <button type="button" mat-button style="background: rgb(252, 1, 1); margin-left: 2%" (click)="disapprove()">Disapprove</button>
+  </div>
+</mat-card>

@@ -1,0 +1,40 @@
+<mat-card class="mt-3">
+  <div class="example-container">
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Id" disabled value={{product?.productId}}>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Enter product name" formControlName="productName">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <mat-select placeholder="Select Vendor" formControlName="vendor" required>
+          <div *ngFor="let vendor of vendors">
+            <mat-option [value]="vendor">{{vendor?.vendorName}}</mat-option>
+          </div>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input type="number" matInput formControlName="price" placeholder="Enter M.R.P.(rupees)">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput formControlName="batchNum" placeholder="Enter Batch Number">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input type="date" matInput formControlName="batchDate" placeholder="Enter Manufacturing Date">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input type="number" matInput formControlName="quantity" placeholder="Quantity">
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-button style="background: rgb(15, 163, 40)">Submit</button>
+      <button mat-button style="background: rgb(224, 33, 7); margin-left: 5%;" (click) = "onCancel()">Cancel</button>
+    </form>
+  </div>
+</mat-card>

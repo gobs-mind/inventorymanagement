@@ -1,0 +1,8 @@
+.color {
+    background:#a6a6a6;
+  }
+
+  .box:hover {
+    background: #c6c4b7;
+    cursor: pointer;
+}

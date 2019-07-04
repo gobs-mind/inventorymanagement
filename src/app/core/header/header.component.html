@@ -1,0 +1,15 @@
+<mat-toolbar style="background : rgb(230, 99, 24)">
+  <label style="cursor : pointer; font-size: larger" routerLink="">GOBS-INVENTORY</label>
+  <label style="margin-left: 2%; font-size: medium; cursor : pointer" routerLink="/home">Home</label>
+  <label style="margin-left: 2%; font-size: medium; cursor : pointer" routerLink="/aboutUs">About Us</label>
+  <label style="margin-left: 2%; font-size: medium; cursor : pointer" routerLink="/help">Help</label>
+  <span class="example-spacer"></span>
+  <div *ngIf="!isLogin()">
+      <button mat-button style="background: rgb(201, 54, 78); cursor : pointer" routerLink="/login">Login</button>  
+  </div>
+  <div *ngIf="isLogin()">
+      <button mat-button style="background: rgb(201, 54, 78); cursor : pointer" (click)="logout()" routerLink="/home">Logout</button>  
+  </div>
+  
+  <!-- <mat-icon ng-if="isLogin()" class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon> -->
+</mat-toolbar>

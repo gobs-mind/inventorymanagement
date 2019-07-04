@@ -1,0 +1,11 @@
+.mat-card {    
+    text-align: -webkit-center;    
+}    
+
+.full-width{
+    width: 400px ;
+}
+
+textarea{
+    resize: none
+}

@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+  <div style="padding: 0% 0% 0% 0%;">
+      <mat-toolbar style="background: rgb(255, 196, 0)153, 153, 219);  ">
+          <mat-card-title>Login</mat-card-title>
+          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-toolbar>
+  </div>
+  <mat-card-content>
+
+    <div class="example-container">
+      <form [formGroup]="loginForm">
+          <mat-form-field style="width: 80%">
+              <mat-label>Enter Username</mat-label>
+            <input matInput formControlName="username">
+          </mat-form-field>
+          <mat-form-field style="width: 80%">
+              <input matInput formControlName="password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+              <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+      </form>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions class="submit-button">
+    <button mat-button style="background: green" (click)="onLogin()">Go</button>
+  </mat-card-actions>
+</mat-card>
